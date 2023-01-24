@@ -1,2 +1,5 @@
-*/logins3.txt
-*/.vscode
+/logins3.txt
+/*/logins3.txt
+/.vscode
+*.out
+/*/.vscode
