@@ -1,3 +1,5 @@
+// TODO make p4-2 faster (use only 3 nested loops)
+
 #include <iostream>
 
 using namespace std;
