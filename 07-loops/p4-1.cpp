@@ -3,12 +3,18 @@
 using namespace std;
 
 int main() {
-    int cnt = 0;
-    
-    for (int i = 50; i <= 300; i++)
-        for (int j = (i < 70)? 70:(i + 1); j <= 400; j++)
-            if (i < j && (i + j) % 7 == 0)
-                cnt++;
-    cout << cnt << '\n';
+    int n;
+
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (i == j || i + j == (n + 1))
+                cout << '*';
+            else
+                cout << ' ';
+        }
+        cout << '\n';
+    }
     return 0;
 }

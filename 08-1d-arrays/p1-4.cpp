@@ -4,18 +4,22 @@ using namespace std;
 
 int main() {
     int n;
-    bool is_prime = true;
+    bool out = true;
 
     cin >> n;
 
-    for (int i = 2; i <= (n / 2); i++) {
-        if (n % i == 0) {
-            is_prime = false;
+    int a[n];
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    
+    for (int i = 0; i < n / 2; i++) {
+        if (a[i] != a[n - 1 - i]) {
+            out = false;
             break;
         }
     }
 
-    if (is_prime)
+    if (out)
         cout << "YES";
     else
         cout << "NO";

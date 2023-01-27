@@ -3,19 +3,12 @@
 using namespace std;
 
 int main() {
-    long long cnt = 0;
+    int cnt = 0;
     
-    for (int a = 1; a <= 200; a++) {
-        for (int b = 1; b <= 200; b++) {
-            for (int c = 1, d = 1; c <= 200 && d <= 200; c++, d++) {
-                for (int d = 1; d <= 200; d++) {
-                    if (a + b == c + d)
-                        cnt++;
-                }
-            }
-        }
-    }
-
+    for (int i = 50; i <= 300; i++)
+        for (int j = (i < 70)? 70:(i + 1); j <= 400; j++)
+            if (i < j && (i + j) % 7 == 0)
+                cnt++;
     cout << cnt << '\n';
     return 0;
 }

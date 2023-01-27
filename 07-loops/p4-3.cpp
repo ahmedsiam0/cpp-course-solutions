@@ -1,24 +1,22 @@
+// TODO: only use 3 nested loops
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    int n;
-    bool is_prime = true;
-
-    cin >> n;
-
-    for (int i = 2; i <= (n / 2); i++) {
-        if (n % i == 0) {
-            is_prime = false;
-            break;
+    long long cnt = 0;
+    
+    for (int a = 1; a <= 200; a++) {
+        for (int b = 1; b <= 200; b++) {
+            for (int c = 1; c <= 200; c++) {
+                for (int d = 1; d <= 200; d++) {
+                    if (a + b == c + d)
+                        cnt++;
+                }
+            }
         }
     }
 
-    if (is_prime)
-        cout << "YES";
-    else
-        cout << "NO";
-    cout << '\n';
+    cout << cnt << '\n';
     return 0;
 }
