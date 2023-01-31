@@ -13,8 +13,9 @@ int main() {
     
     for (int i = 0; i < (n - 1); i++) {
         for (int j = i + 1; j < n; j++) {
-            if (j == 1 || min > (a[i] + a[j] + j - i))
-                min = a[i] + a[j] + j - i;
+            int temp = a[i] + a[j] + j - i;
+            if (j == 1 || min > temp)
+                min = temp;
         }
     }
 
